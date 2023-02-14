@@ -1,10 +1,16 @@
+let pinCode = '1234';
+
 const prompt = require(`prompt-sync`)({signt: true});
 
-let pinCode = "0827"
-let system = prompt(`Please enter the password: `);
+console.log(`Enter the passcode`);
+let user = prompt('> ');
 
-if(system === pinCode){
-    console.log(`Success`);
-}else{
-    console.log(`Failure`);
+while(user !== pinCode){
+    console.log('Failure');
+    console.log('\n');
+    console.log(`Enter the passcode`);
+    user = prompt('> ');
+    console.log('\n');
 }
+
+console.log(`Success`);
